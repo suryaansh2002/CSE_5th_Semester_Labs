@@ -1,0 +1,3 @@
+main hello = world
+
+int main new 
