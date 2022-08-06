@@ -1,0 +1,3 @@
+sudo apt install rpm
+rpm -qa
+dpkg -l
