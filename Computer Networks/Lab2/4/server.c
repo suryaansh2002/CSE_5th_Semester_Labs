@@ -50,8 +50,8 @@ void PerformServerTask(int sockfd)
         printf("\nMessage from port no: %d\n", cliaddr.sin_port);
         n = send(newsockfd, &res, sizeof(res), 0);
 
-        // close(newsockfd);
-        // exit(0);
+        close(newsockfd);
+        exit(0);
     }
     // Otherwise, you must be the parent and your work for this client is finished
     else
@@ -60,11 +60,10 @@ void PerformServerTask(int sockfd)
 
 int main()
 {
-    int sockfd, newsockfd, portno, clilen, n = 1;
+    int sockfd;
 
     char buf[256];
-    struct sockaddr_in seraddr, cliaddr;
-    int i, value;
+    struct sockaddr_in seraddr;
     sockfd = createServerSocket(&seraddr, "127.0.0.1");
     while (1)
     {

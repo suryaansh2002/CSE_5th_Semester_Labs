@@ -30,8 +30,6 @@ void PerformClientTask(int sockfd)
 {
     int n = 1;
     int count;
-    while (1)
-    {
 
         printf("\n Enter the number of elements in the array: \t");
         scanf("%d", &count);
@@ -56,7 +54,6 @@ void PerformClientTask(int sockfd)
             break;
         }
     }
-}
 
 int TerminateSocket(int sockfd)
 {

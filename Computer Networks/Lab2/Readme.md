@@ -15,4 +15,4 @@ operator. The server will performs the operation on integers and sends result ba
 the client which is displayed on the client screen. Then both the processes terminate.
 
 
-5. Implement simple TCP daytime server using select().
+5. Implement simple TCP daytime server.

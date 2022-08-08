@@ -68,11 +68,8 @@ void PerformServerTask(int sockfd)
 
 int main()
 {
-    int sockfd, newsockfd, portno, clilen, n = 1;
-
-    char buf[256];
-    struct sockaddr_in seraddr, cliaddr;
-    int i, value;
+    int sockfd;
+    struct sockaddr_in seraddr;
     sockfd = createServerSocket(&seraddr, "127.0.0.1");
     while (1)
     {
