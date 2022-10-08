@@ -1,8 +1,5 @@
 set ns [new Simulator]
 
-$ns color 1 green
-$ns color 2 Red
-
 set nt [open simulate.nam w]
 $ns namtrace-all $nt
 
@@ -12,7 +9,7 @@ $ns trace-all $tr
 proc finish {} {
 global ns nt tr
 $ns flush-trace
-#Close the NAM trace file
+
 close $nt
 close $tr
 exec nam simulate.nam &
